@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<VBox alignment="CENTER" styleClass="background" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Supplier.SupplierCustomerController">
+  <ImageView fx:id="imageView" fitHeight="150" fitWidth="600"/>
+  <Separator/>
+  <Label fx:id="introLbl" styleClass="heading"/>
+  <Separator/>
+
+  <TableView fx:id="productsTv" prefHeight="200.0" prefWidth="600.0">
+    <placeholder>
+      <Label text="No products available"/>
+    </placeholder>
+    <columns>
+      <TableColumn text="Name" prefWidth="300">
+        <cellValueFactory>
+            <PropertyValueFactory property="name"/>
+        </cellValueFactory>
+    </TableColumn>
+    <TableColumn text="Price" prefWidth="150">
+        <cellValueFactory>
+            <PropertyValueFactory property="price"/>
+        </cellValueFactory>
+    </TableColumn>
+    <TableColumn text="Stock" prefWidth="150">
+        <cellValueFactory>
+            <PropertyValueFactory property="stock"/>
+        </cellValueFactory>
+    </TableColumn>
+    </columns>
+  </TableView>
+  <HBox alignment="CENTER">
+    <Button fx:id="orderBtn" text="Order" onAction="#order" styleClass="button" prefWidth="300"/>
+    <Button fx:id="closeBtn" text="Close" onAction="#close" styleClass="button" prefWidth="300"/>
+  </HBox>
+
+  <stylesheets>
+    <URL value="@../style.css"/>
+  </stylesheets>
+</VBox>

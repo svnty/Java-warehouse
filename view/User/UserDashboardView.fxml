@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox alignment="CENTER" styleClass="background" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.User.UserDashboardController">
+  <ImageView fx:id="imageView" fitHeight="150" fitWidth="600"/>
+  <Separator/>
+  <Label fx:id="welcomeLbl" styleClass="heading"/>
+  <Separator/>
+  <HBox styleClass="hbox">
+    <Button text="Shop" fx:id="shopBtn" styleClass="button" prefWidth="200" />
+    <Button text="Order History" fx:id="orderHistoryBtn" onAction="#orderHistory" styleClass="button" prefWidth="200" />
+    <Button text="Close" styleClass="button" prefWidth="200" onAction="#close" />
+  </HBox>
+
+<stylesheets>
+    <URL value="@../style.css"/>
+</stylesheets>
+</VBox>

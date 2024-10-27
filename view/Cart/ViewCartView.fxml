@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<VBox alignment="CENTER" styleClass="background" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Cart.ViewCartController">
+  <ImageView fx:id="imageView" fitHeight="150" fitWidth="600"/>
+  <Separator/>
+  <Label text="Your cart" styleClass="heading"/>
+  <Separator/>
+
+  <TableView fx:id="cartTv">
+    <columns>
+      <TableColumn text="Name" prefWidth="300">
+        <cellValueFactory>
+            <PropertyValueFactory property="name"/>
+        </cellValueFactory>
+    </TableColumn>
+    <TableColumn text="Quantity" prefWidth="300">
+        <cellValueFactory>
+            <PropertyValueFactory property="quantity"/>
+        </cellValueFactory>
+    </TableColumn>
+    </columns>
+  </TableView>
+
+  <HBox alignment="CENTER">
+    <Button fx:id="removeBtn" onAction="#remove" text="Remove" styleClass="button" prefWidth="300"/>
+    <Button fx:id="closeBtn" onAction="#close" text="Close" styleClass="button" prefWidth="300"/>
+  </HBox>
+  
+  <stylesheets>
+    <URL value="@../style.css"/>
+  </stylesheets>
+</VBox>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox alignment="CENTER" styleClass="background" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Supplier.ManageProductsController">
+  <ImageView fx:id="imageView" fitHeight="150" fitWidth="600"/>
+  <Separator/>
+  <Label text="Edit supplier" styleClass="heading"/>
+  <Separator/>
+
+  <ListView fx:id="listView">
+  </ListView>
+
+
+  <HBox alignment="CENTER">
+    <Button text="Remove" onAction="#remove" styleClass="button" prefWidth="200"/>
+    <Button fx:id="delistBtn" text="Delist" onAction="#delist" styleClass="button" prefWidth="200"/>
+    <Button text="Close" onAction="#close" styleClass="button" prefWidth="200"/>
+  </HBox>
+  <stylesheets>
+    <URL value="@../style.css"/>
+  </stylesheets>
+</VBox>

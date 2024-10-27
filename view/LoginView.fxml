@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox alignment="CENTER" styleClass="background" prefWidth="400.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+        <Separator/>
+        <Label text="Login" styleClass="heading"/>
+        <Separator/>
+
+        <!-- Center the hbox -->
+        <HBox styleClass="hbox" alignment="CENTER">
+            <Label text="Username:" styleClass="label"/>
+            <TextField fx:id="usernameTf" styleClass="textfield"/>
+        </HBox>
+        <HBox styleClass="hbox" alignment="CENTER">
+            <Label text="Password:" styleClass="label"/>
+            <PasswordField fx:id="passwordPf" styleClass="textfield"/>
+        </HBox>
+
+        
+        <HBox styleClass="hbox">
+            <Button text="Login" prefWidth="200" fx:id="loginBtn" onAction="#login" />
+            <Button text="Close" prefWidth="200" onAction="#close" />
+        </HBox>
+
+        <stylesheets>
+            <URL value="@style.css"/>
+        </stylesheets>
+</VBox>
